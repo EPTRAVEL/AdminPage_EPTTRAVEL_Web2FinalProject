@@ -1,0 +1,10 @@
+.list{
+    display: flex;
+    margin: 50px 0;
+}
+a:hover{
+    cursor: pointer;
+}
+html{
+    padding-top: 30px;
+}
