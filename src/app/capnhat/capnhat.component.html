@@ -1,24 +1,60 @@
 <H1>CẬP NHẬT</H1>
 
-        <ul class="list">
-            <li class="list-group-item">
-                <a class="nav-link" >Tour</a>
-            </li>
-            <li class="list-group-item">
-                <a class="nav-link" >Tin tức</a>
-            </li>
-            <li class="list-group-item ">
-                <a class="nav-link" >Hình ảnh</a>
-            </li>
-        </ul>
-   
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1></h1>
+<ul class="list">
+    <li class="list-group-item">
+        <a class="nav-link">Tour</a>
+    </li>
+    <li class="list-group-item">
+        <a class="nav-link">Tin tức</a>
+    </li>
+    <li class="list-group-item ">
+        <a class="nav-link">Hình ảnh</a>
+    </li>
+</ul>
+<router-outlet>
+
+</router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <form>
+                <h3>Thông tin</h3>
+                <div class="mb-3">
+                    <label for="tentour">Tên tour </label>
+                    <input type="text" id="tentour">
                 </div>
-                <div class="col-md-5">
-                    f
+                <div class="mb-3">
+                    <div class="cl-1">
+                    <label for="matour">Mã tour </label>
+                    <input type="text" id="matour"> 
+                    <br>
+                    <label for="ngaykhoihanh">Ngày khởi hành </label>
+                    <input type="datetime-local">
+                    <br>
+                    <label for="cho">Còn chỗ </label>
+                    <input type="number" id="cho">
+                    </div>
+                    <div class="cl-2">
+                        <label for="diemden">Điểm đến </label>
+                    <input type="text" id="diemden">
+                    <br>
+                    <label for="noikhoihanh">Nơi khởi hành </label>
+                    <input type="text" id="noikhoihanh">
+                    <br>
+                    <label for="thoigian">Thời gian </label>
+                    <input type="number" id="thoigian">
+                    <br>
+                    <label for="khachsan">Khách sạn </label>
+                    <input type="text" id="khachsan">
+                    </div>
                 </div>
-            </div>
+                <div class="mb-3">
+                    
+                </div>
+            </form>
         </div>
+        <div class="col-md-5">
+            f
+        </div>
+    </div>
+</div>
