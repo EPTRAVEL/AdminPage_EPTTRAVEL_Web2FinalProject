@@ -1,10 +1,39 @@
-.list{
-    display: flex;
-    margin: 50px 0;
-}
-a:hover{
-    cursor: pointer;
-}
-html{
-    padding-top: 30px;
-}
+    .list {
+        display: flex;
+        margin: 50px 0;
+        height: 40px;
+    }
+    
+    a:hover {
+        cursor: pointer;
+    }
+    
+    html {
+        padding-top: 30px;
+    }
+    
+    input,
+    textarea,
+    select {
+        background-color: #E1EBFF;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .update_hinhanh {
+        background-color: #E1EBFF;
+        border-radius: 5px;
+    }
+    
+    img {
+        width: 100px;
+        height: 80px;
+    }
+    
+    .themsanpham {
+        background-color: #3A36DB;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+    }

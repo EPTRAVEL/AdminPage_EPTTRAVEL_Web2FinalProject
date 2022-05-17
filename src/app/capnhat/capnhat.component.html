@@ -1,60 +1,131 @@
-<H1>CẬP NHẬT</H1>
+<H3 class="m-3">CẬP NHẬT</H3>
 
-<ul class="list">
-    <li class="list-group-item">
-        <a class="nav-link">Tour</a>
+<ul class="list ">
+    <li class="list-group-item rounded pt-0">
+        <a id="tour" href="#tour" class="nav-link active">Tour</a>
     </li>
-    <li class="list-group-item">
+    <li class="list-group-item rounded pt-0">
         <a class="nav-link">Tin tức</a>
     </li>
-    <li class="list-group-item ">
+    <li class="list-group-item rounded pt-0">
         <a class="nav-link">Hình ảnh</a>
     </li>
 </ul>
 <router-outlet>
 
 </router-outlet>
-<div class="container">
-    <div class="row">
-        <div class="col-md-7">
+<div class="container ">
+    <div class="row m-2 ">
+        <div class="col-md-8 bg-white rounded ">
             <form>
-                <h3>Thông tin</h3>
-                <div class="mb-3">
-                    <label for="tentour">Tên tour </label>
-                    <input type="text" id="tentour">
+                <h6 class="text-center ">Thông tin</h6>
+                <div class="mb-3 row ">
+                    <label class="col-2 " for="tentour ">Tên tour </label>
+                    <input class="col-10 w-90 " type="text " id="tentour ">
                 </div>
-                <div class="mb-3">
-                    <div class="cl-1">
-                    <label for="matour">Mã tour </label>
-                    <input type="text" id="matour"> 
-                    <br>
-                    <label for="ngaykhoihanh">Ngày khởi hành </label>
-                    <input type="datetime-local">
-                    <br>
-                    <label for="cho">Còn chỗ </label>
-                    <input type="number" id="cho">
+                <div class="mb-3 row ">
+                    <div class="cl-1 col-6 ">
+                        <div class="row ">
+                            <label class="col-4 " for="matour ">Mã tour </label>
+                            <input class="col-8 " type="text " id="matour ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-6 " for="ngaykhoihanh ">Ngày khởi hành </label>
+                            <input class="col-6 " type="date ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="cho ">Còn chỗ </label>
+                            <input class="col-8 " type="number " id="cho ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-6 " for="cho ">Phương tiện </label>
+                            <select class=" col-6 w-50 h-1 form-select ">
+                                <option selected></option>
+                                <option value="1 ">Xe máy</option>
+                                <option value="2 ">Xe hơi</option>
+                                <option value="3 ">Xe bus</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="cl-2">
-                        <label for="diemden">Điểm đến </label>
-                    <input type="text" id="diemden">
-                    <br>
-                    <label for="noikhoihanh">Nơi khởi hành </label>
-                    <input type="text" id="noikhoihanh">
-                    <br>
-                    <label for="thoigian">Thời gian </label>
-                    <input type="number" id="thoigian">
-                    <br>
-                    <label for="khachsan">Khách sạn </label>
-                    <input type="text" id="khachsan">
+                    <div class="cl-2 col-6 ">
+                        <div class="row ">
+                            <label class="col-4 " for="diemden ">Điểm đến </label>
+                            <input class="col-8 " type="text " id="diemden ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-6 " for="noikhoihanh ">Nơi khởi hành </label>
+                            <input class="col-6 " type="text " id="noikhoihanh ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="thoigian ">Thời gian </label>
+                            <input class="col-8 " type="time " id="thoigian ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="khachsan ">Khách sạn </label>
+                            <input class="col-8 " type="text " id="khachsan ">
+                        </div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    
+                <h6 class="text-center ">Giá vé</h6>
+                <div class="mb-3 row ">
+                    <div class="col-1 col-6 ">
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="giavenl ">Người lớn</label>
+                            <input class="col-8 " type="number " id="giavenl ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="giavetn ">Trẻ nhỏ</label>
+                            <input class="col-8 " type="number " id="giavetn ">
+                        </div>
+                    </div>
+                    <div class="col-2 col-6 ">
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="giavete ">Trẻ em</label>
+                            <input class="col-8 " type="number " id="giavete ">
+                        </div>
+                        <div class="row mt-3 ">
+                            <label class="col-4 " for="giaveeb ">Em bé</label>
+                            <input class="col-8 " type="number " id="giaveeb ">
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-center ">Mô tả</h6>
+                <div class="row mt-3 ">
+                    <label class="col-2 " for="lichtrinh ">Lịch trình</label>
+                    <textarea class=" col-10 w-75 form-control " id="lichtrinh " rows="4 "></textarea>
+                </div>
+                <div class="row mt-3 ">
+                    <label class="col-2 " for="diadiemthamquan ">Địa điểm tham quan</label>
+                    <textarea class=" col-10 w-75 form-control " id="diadiemthamquan " rows="3 "></textarea>
+                </div>
+                <div class="row mt-3 ">
+                    <div class="col-1 col-2 ">
+                    </div>
+                    <div class="col-2 col-10 row update_hinhanh justify-content-around ">
+                        <div class="col-1 col-2 ">
+                            <img src=" " alt=" ">
+                        </div>
+                        <div class="col-1 col-2 ">
+                            <img src=" " alt=" ">
+                        </div>
+                        <div class="col-1 col-2 ">
+                            <img src=" " alt=" ">
+                        </div>
+                        <div class="col-1 col-2 ">
+                            <img src=" " alt=" ">
+                        </div>
+                        <div class="col-1 col-2 ">
+                            <img src=" " alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 text-center ">
+                    <button class="themsanpham ">+ Thêm sản phẩm</button>
                 </div>
             </form>
         </div>
-        <div class="col-md-5">
-            f
+        <div class="col-md-4 bg-white ">
+            <h6 class="text-center ">Tour đã thêm</h6>
         </div>
     </div>
 </div>
