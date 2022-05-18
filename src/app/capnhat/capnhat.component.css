@@ -25,10 +25,10 @@
         border-radius: 5px;
     }
     
-    img{
+    /* img{
         width: 100px;
         height: 80px;
-    }
+    } */
     
     .themsanpham {
         background-color: #3A36DB;
@@ -74,3 +74,24 @@
     .images-admin{
         margin-left: 2px;
     }
+    .form-style{
+        display: flex;
+        text-align: left;
+    }
+    .style--left{
+        flex: 1;
+        margin-right: 10px;
+    }
+    .style--right{
+        flex: 1;
+        margin-left: 10px;
+    }
+    .style--right2{
+        flex: 3;
+        text-align: right;
+    }
+    .style--img{
+        margin: 10px important;
+        
+    }
+    
