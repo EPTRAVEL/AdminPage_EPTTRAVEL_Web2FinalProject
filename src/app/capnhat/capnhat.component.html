@@ -2,19 +2,21 @@
 
 <ul class="list ">
     <li class="list-group-item rounded pt-0">
-        <a id="tour" href="#tour" class="nav-link active">Tour</a>
+        <a id="tour-dulich" href="#tour" class="nav-link active" role="tab" aria-controls="tour"
+            aria-selected="true">Tour</a>
     </li>
     <li class="list-group-item rounded pt-0">
         <a class="nav-link">Tin tức</a>
     </li>
-    <li class="list-group-item rounded pt-0">
-        <a class="nav-link">Hình ảnh</a>
+    <li class="list-group-item rounded pt-0" ui-route="images" ng-class="{active: $uiRoute}">
+        <a id="image-khac" href="#images" class="nav-link" role="tab" aria-controls="images" aria-selected="true">Hình
+            ảnh</a>
     </li>
 </ul>
-<router-outlet>
+<router-outlet></router-outlet>
 
-</router-outlet>
-<div class="container ">
+<!-- Cập nhật tour -->
+<div class="container" id="tour" aria-labelledby="tour-dulich">
     <div class="row m-2 ">
         <div class="col-md-8 bg-white rounded ">
             <form>
@@ -128,4 +130,169 @@
             <h6 class="text-center ">Tour đã thêm</h6>
         </div>
     </div>
+</div> 
+
+<!-- Cập nhật hình ảnh -->
+<div class="container" id="images" aria-labelledby="image-khac">
+    <div class="row m-2 ">
+        <div class="col-md-8 bg-white rounded ">
+            <h6 class="text-center">Hình ảnh</h6>
+            <form>
+                <div class="row">
+                   <div class="row">
+                    <label for="banner_trangchu">Banner Trang chủ</label>
+                   </div>
+                    <div class="row  images-banner_trangchu  justify-content-around">
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                    </div>
+                 <div class="row">
+                    <button class="bi bi-plus images-plus"> Thêm ảnh</button>
+                 </div>
+                </div>
+
+                <div class="row images-row">
+                    <label for="banner_khuyenmai">Banner Khuyến Mãi</label>
+                    <div class="row  images-banner_trangchu  justify-content-around">
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                        <div class="col">
+                            <img src="">
+                        </div>
+                    </div>
+                   <div class="row"> <button class="bi bi-plus images-plus"> Thêm ảnh</button></div>
+                </div>
+
+                <div class="row images-row">
+                    <div class="row">
+                        <label for="admin">Đội ngũ admin</label>
+                    </div>
+                    <div class="row  images-banner_trangchu  justify-content-around ">
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                        <div class="col images-admin">
+                            <img style="width:90px" src="">
+                        </div>
+                    </div>
+                    <div class="row"><button class="bi bi-plus images-plus"> Thêm ảnh</button></div>
+                </div>
+                <div class="row images-row">
+                    <div class="col-3">
+                        <label for="tour_trong">Ảnh tour trong nước</label>
+                        <div class="images-banner_trangchu">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <label for="tour_ngoai">Ảnh tour ngoài nước</label>
+                        <div class="images-banner_trangchu">
+                            <img src="" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="row"><button class="bi bi-plus images-plus"> Thêm ảnh</button></div>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-4 bg-white">
+            <h6 class="text-center ">Ảnh đã thêm</h6>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <img src="">
+                </div>
+                <div class="col">
+                    <p>Banner - Ảnh đã thêm</p>
+                </div>
+                <div>
+                    <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <img src="">
+                </div>
+                <div class="col">
+                    <p>Banner Khuyến Mãi - Ảnh đã thêm</p>
+                </div>
+                <div>
+                    <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <img src="">
+                </div>
+                <div class="col">
+                    <p>Đội ngũ Admin - Ảnh đã thêm</p>
+                </div>
+                <div>
+                    <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <img src="">
+                </div>
+                <div class="col">
+                    <p>Tour trong nước - Ảnh đã thêm</p>
+                </div>
+                <div>
+                    <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4">
+                    <img src="">
+                </div>
+                <div class="col">
+                    <p>Tour ngoài nước - Ảnh đã thêm</p>
+                </div>
+                <div>
+                    <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

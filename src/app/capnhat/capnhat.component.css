@@ -25,7 +25,7 @@
         border-radius: 5px;
     }
     
-    img {
+    img{
         width: 100px;
         height: 80px;
     }
@@ -36,4 +36,41 @@
         border: none;
         border-radius: 5px;
         height: 30px;
+    }
+    .images-banner_trangchu{
+        background-color: #E1EBFF;
+        width: 90%;
+        height: 100px;
+        line-height: 95px;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+    .images-row{
+        margin-top: 40px;
+    }
+    .images-plus{
+        width:130px;
+        height: 32px;
+        margin-top: 10px;
+        margin-left: 1%;
+       background-color:  #3A36DB ;
+       color: white;
+       text-align: center;
+       border: 0;
+       border-radius: 8px;
+    }
+    .images-button-bin{
+        width:80px;
+        height: auto;
+        margin: auto;
+        float: right;
+        color: #0016DD ;
+        background-color: #D2DEF5;
+        border: 0px;
+        border-radius: 3px;
+    }
+    .images-admin{
+        margin-left: 2px;
     }
