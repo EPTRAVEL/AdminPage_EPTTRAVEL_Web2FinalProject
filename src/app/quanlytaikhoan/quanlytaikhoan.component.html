@@ -1,1 +1,51 @@
-<p>quanlytaikhoan works!</p>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<h2 class="m-3">
+    HÓA ĐƠN</h2>
+<div class="container">
+    <table class="table table-borderless">
+        <tr class="text-center">
+            <!-- <th><input type="checkbox"></th> -->
+            <!-- <th>MÃ HÓA ĐƠN</th> -->
+            <th>KHÁCH HÀNG</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>Giới Tính</th>
+            <th>TRẠNG THÁI</th>
+            <th><i class='fa fa-trash-o'></i></th>
+        </tr>
+
+        <!-- lặp lại -->
+        <tr class="bg-white mt-1 text-center list-user" *ngFor="let u of userData">
+            <!-- <td><input type="checkbox"></td> -->
+            <!-- <td>#83876364</td> -->
+            <td><img src="http://localhost:8000/{{u.avarImg}}" alt="Avatar" class="avatar">{{u.
+                hoTen}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.diDong}}</td>
+            <td>{{u.gioiTinh}}</td>
+            <td>
+                <div class="status w-100 rounded-pill p-1">ĐÃ XÁC NHẬN</div>
+            </td>
+            <td>
+                <button class="btn btn-outline-light text-center" data-bs-toggle="modal" data-bs-target="#myModal">...</button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Modal Heading</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                Modal body..
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+      
+    </table>
+</div>

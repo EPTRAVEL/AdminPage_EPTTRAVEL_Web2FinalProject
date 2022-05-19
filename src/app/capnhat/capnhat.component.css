@@ -94,4 +94,25 @@
         margin: 10px important;
         
     }
-    
+    .tour-item{
+        display: flex;
+        position: relative;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    .tour-item img{
+        flex: 1;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .tour-item div{
+        flex: 1;
+    }
+    .button-group{
+        position: absolute;
+        right: 5px;
+        bottom: 0px
+    }
+    .button-group .btn{
+        margin-left: 5px
+    }
