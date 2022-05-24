@@ -8,6 +8,7 @@ import { Tour } from '../interfaces/tour';
 })
 export class UpdateTourService {
   url: string = "http://localhost:8000/Tours"
+  base_url: string = "http://localhost:8000"
   constructor(private _http: HttpClient) { }
 
   getTours(): Observable<Tour[]> {
@@ -18,6 +19,13 @@ export class UpdateTourService {
   }
   handleError(err: HttpErrorResponse) {
     return throwError(() => new Error(err.message)
+    )
+  }
+
+  uploadData(data: any){
+    return this._http.post(`${this.base_url}/v1/tour/addtour`,data).pipe(
+      // retry(2),
+      // catchError(this.handleError)
     )
   }
 }

@@ -116,3 +116,16 @@
     .button-group .btn{
         margin-left: 5px
     }
+    input[type="file"] {
+       
+      }
+
+      .custom-file-input.selected:lang(en)::after {
+        content: "" !important;
+      }
+      .custom-file {
+        overflow: hidden;
+      }
+      .custom-file-input {
+        white-space: nowrap;
+      }
