@@ -22,10 +22,16 @@ export class UpdateTourService {
     )
   }
 
+
   uploadData(data: any){
     return this._http.post(`${this.base_url}/v1/tour/addtour`,data).pipe(
       // retry(2),
       // catchError(this.handleError)
     )
+  }
+
+
+  removeTour(id: any) {
+    return this._http.delete(`${this.base_url}/tours/${id}`);
   }
 }
