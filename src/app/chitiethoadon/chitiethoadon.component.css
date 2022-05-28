@@ -28,5 +28,7 @@
  }
  .CTDH_btnBack{
      border: none;
-     
+ }
+ .font_bold{
+     font-weight: bold;
  }
