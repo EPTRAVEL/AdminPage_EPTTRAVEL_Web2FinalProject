@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { ChitiethoadonComponent } from './chitiethoadon/chitiethoadon.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
     MessagesComponent,
     ThongbaoComponent,
     CaidatComponent,
-    MenubarComponent
+    MenubarComponent,
+    ChitiethoadonComponent
   ],
   imports: [
     BrowserModule,
