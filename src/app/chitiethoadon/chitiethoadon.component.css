@@ -6,3 +6,27 @@
     border: none;
     height: 40px;
 }
+
+.CTDH_magiamgia{
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+ }
+ .CTDH_total{
+     width: 50%;
+     margin: 5px auto;
+ }
+ .CTDH_btnLuu{
+     width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: #3A36DB;
+    background-color: #F1F4FA;
+    border: none;
+    font-weight: bold;
+ }
+ .CTDH_btnBack{
+     border: none;
+     
+ }
