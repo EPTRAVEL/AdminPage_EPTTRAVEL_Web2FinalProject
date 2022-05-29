@@ -1,1 +1,78 @@
-<p>chitietkhachhang works!</p>
+<div class="container">
+    <button class="btnback">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+    </button>
+    <span class="mb-3" style="font-size: 20px"> <b> CHI TIẾT KHÁCH HÀNG </b> </span>
+    <div class="container"  style="width:80% ;">
+        <div class="d-flex justify-content-center">
+            <img class="img_ctkh" src="..\assets\images\IMAGE\Vision.jpg">
+        </div>
+        <form>
+            <div class="row mt-lg-5">
+                <div class="col p-3">
+                    <p class="font_bold">Tên</p>
+                    <input name="tenkh" id="tenkh" class="ctkh" placeholder="Họ và tên">
+                </div>
+                <div class="col  p-3">
+                    <p class="font_bold" for="tenkh" id="tenkh">Giới tính</p>
+                    <select class="form-select ctkh">
+                        <option> Nữ </option>
+                        <option> Nam </option>
+                        <option> Khác </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-2 ">
+                <div class="col p-3">
+                    <p class="font_bold">Email</p>
+                    <input name="email" id="email" class="ctkh" placeholder="Example@gmail.com">
+                </div>
+                <div class="col p-3">
+                    <p class="font_bold">Số điện thoại</p>
+                    <input name="sdt" id="sdt" class="ctkh" placeholder="Số điện thoại">
+                </div>
+            </div>
+            <div class="row mt-2"> 
+                <div class="col p-3">
+                    <p class="font_bold">Địa chỉ</p>
+                    <input name="diachi" id="diachi" class="ctkh_1" placeholder="Địa chỉ">
+                </div>
+            </div>
+        </form>
+        <div  class="row mt-3">
+           <div class="col p-3">
+            <p class="font_bold">Lịch sử đặt hàng</p>
+           </div>
+        </div>
+<table class="table-borderless">
+<thead>
+    <tr style="height: 40px;">
+        <th style="width:700px;"></th>
+        <th>Số lượng</th>
+    </tr>
+</thead>
+<tbody>
+    <tr  style="height: 50px;">
+    <td class="text-primary">Tour đang xử lý</td>
+    <td class="text-success">01</td>
+</tr>
+<tr  style="height: 50px;">
+    <td class="text-primary">Tour đã đặt thành công</td>
+    <td class="text-success">05</td>
+</tr>
+<tr  style="height: 50px;">
+    <td class="text-primary">Tour đã hủy</td>
+    <td class="text-success">01</td>
+</tr>
+</tbody>
+</table>
+       
+    </div>
+    <div class="text-center mt-5">
+        <button type="button" class="CTDH_btnLuu">LƯU</button>
+    </div>
+</div>

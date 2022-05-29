@@ -1,0 +1,39 @@
+
+.btnback{
+    border: none;
+}
+.img_ctkh{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.font_bold{
+    font-weight: bold;
+}
+.ctkh{
+    background-color: #F1F4FA;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 7px;
+    border: none;
+    height: 40px;
+    width: 70%;
+}
+.ctkh_1{
+    background-color: #F1F4FA;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 7px;
+    border: none;
+    height: 40px;
+    width: 85%;
+}
+.CTDH_btnLuu{
+    width: 100px;
+   height: 30px;
+   border-radius: 5px;
+   color: #3A36DB;
+   background-color: #F1F4FA;
+   border: none;
+   font-weight: bold;
+}
