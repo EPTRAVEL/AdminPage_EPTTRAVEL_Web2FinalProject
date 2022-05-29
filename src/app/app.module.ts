@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { ChitiethoadonComponent } from './chitiethoadon/chitiethoadon.component';
+import { ChitietkhachhangComponent } from './chitietkhachhang/chitietkhachhang.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ChitiethoadonComponent } from './chitiethoadon/chitiethoadon.component'
     ThongbaoComponent,
     CaidatComponent,
     MenubarComponent,
-    ChitiethoadonComponent
+    ChitiethoadonComponent,
+    ChitietkhachhangComponent
   ],
   imports: [
     BrowserModule,
