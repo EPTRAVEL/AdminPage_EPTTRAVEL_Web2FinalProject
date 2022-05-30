@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UpdateTourService } from '../services/update-tour.service';
 import { ToastrService } from 'ngx-toastr';
 import { Tour } from '../interfaces/tour';
+
 @Component({
   selector: 'app-capnhat',
   templateUrl: './capnhat.component.html',
@@ -14,7 +15,29 @@ export class CapnhatComponent implements OnInit {
   public hinhAnh: boolean = false;
   tourImg: any = null;
 
-  tour_item: any
+  defaultForm: any = {
+    ten_tour: [''],
+    ma_tour: [''],
+    noikhoihanh: [''],
+    sochoconnhan: [''],
+    diemden: [''],
+    ngaykhoihanh: [''],
+    thoigian: [''],
+    noidungchitiet: [''],
+    diadiemthamquan: [''],
+    phuongtiendichuyen: [''],
+    khachsan: [''],
+    lichtrinh: [''],
+    giatiennguoilon: [''],
+    giatientreem: [''],
+    giatientrenho: [''],
+    giatienembe: [''],
+    quocgia: [''],
+    khuvuc: ['']
+  }
+  
+
+  // tour_item: TourItem =  new TourItem();
 
   allTour: any;
   errorMsg: string = '';
@@ -34,41 +57,12 @@ export class CapnhatComponent implements OnInit {
     this.tinTuc = false;
   }
 
-
-
-  public regForm: FormGroup = this._formBuilder.group({
-    tentour: ['', [Validators.required, Validators.minLength(3)]],
-    matour: ['', Validators.required, Validators.minLength(7)],
-    diemden: ['', Validators.required],
-    confirmPass: ['']
-
-
-
-  })
   constructor(private _formBuilder: FormBuilder, private _service: UpdateTourService, private toastr: ToastrService) { }
   base_url: string = 'http://localhost:8000/tours/'
 
-  public tourForm: FormGroup = this._formBuilder.group({
-    ten_tour: ['xxxx'],
-    ma_tour: ['xxxx'],
-    noikhoihanh: ['xxxx'],
-    sochoconnhan: ['xxxx'],
-    diemden: ['xxxx'],
-    ngaykhoihanh: ['xxxx'],
-    thoigian: ['xxxx'],
-    noidungchitiet: ['xxxx'],
-    diadiemthamquan: ['xxxx'],
-    phuongtiendichuyen: ['xxxx'],
-    khachsan: ['xxxx'],
-    lichtrinh: ['xxxx'],
-    giatiennguoilon: ['xxxx'],
-    giatientreem: ['xxxx'],
-    giatientrenho: ['xxxx'],
-    giatienembe: ['xxxx'],
-    quocgia: ['xxxx'],
-    khuvuc: ['xxxx']
-  })
+  public tourForm: FormGroup = this._formBuilder.group(this.defaultForm)
   SubmitToUpdateTour(data: any) {
+
     let formData = new FormData();
     formData.append('ten_tour', data.ten_tour);
     formData.append('ma_tour', data.ma_tour);
@@ -89,27 +83,53 @@ export class CapnhatComponent implements OnInit {
     formData.append('quocgia', data.quocgia);
     formData.append('khuvuc', data.khuvuc);
 
-
-    for (let i = 0; i < this.tourImg.length; i++) {
-      formData.append('tourImg', this.tourImg[i]);
-    }
-    // formData.append('tourImg', this.tourImg);
-
-    console.log('FormData:', formData);
-
-    this._service.uploadData(formData).subscribe({
-      next: res => {
-        console.log(res);
-        this.toastr.success('Update Tour Success', 'Success!!!');
-        this.getAllTours()
-      },
-      error: err => {
-        console.log(err.message);
-        this.toastr.error('False', 'False', {
-          timeOut: 3000,
-        });
+    if (this.tourImg != null || this.tourImg != undefined) {
+      for (let i = 0; i < this.tourImg.length; i++) {
+        formData.append('tourImg', this.tourImg[i]);
       }
-    })
+    }
+
+    if (data._id === '' || data._id === null || data._id === undefined) {
+     
+
+
+      // alert("xử lý thêm")
+
+      this._service.uploadData(formData).subscribe({
+        next: res => {
+          console.log(res);
+          this.toastr.success('Update Tour Success', 'Success!!!');
+          this.getAllTours()
+          this.tourForm = this._formBuilder.group(this.defaultForm)
+        },
+        error: err => {
+          console.log(err.message);
+          this.toastr.error('False', 'False', {
+            timeOut: 3000,
+          });
+        }
+      })
+    }
+    else {   
+      // alert('xử lý update tour ' + data._id + data.ten_tour)
+      this._service
+        .updateTour(data._id, formData)
+        .subscribe((res) => {
+          let res_u = JSON.parse(JSON.stringify(res));
+          if (res_u.message === 'Update success') {
+            this.getAllTours()
+            this.toastr.info('Update Thành Công', 'Thành công!');
+            this.tourForm = this._formBuilder.group(this.defaultForm)
+          } else {
+            this.toastr.error('Update Thất Bại', 'Thất bại!');
+          }   
+        });
+    }
+
+
+
+
+
   }
 
   ngOnInit(): void {
@@ -135,9 +155,29 @@ export class CapnhatComponent implements OnInit {
     }
   }
 
-  editTour(tour: Tour) {
-    this.tour_item = tour;
-    this.tourForm = this._formBuilder.group(tour)
+  editTour(tour: any) {
+    this.tourForm = this._formBuilder.group({
+      _id: tour._id,
+      ten_tour: tour.ten_tour,
+      ma_tour: tour.ma_tour,
+      noikhoihanh: tour.noikhoihanh,
+      sochoconnhan: tour.sochoconnhan,
+      diemden: tour.diemden,
+      ngaykhoihanh: tour.ngaykhoihanh,
+      thoigian: tour.thoigian,
+      noidungchitiet: tour.noidungchitiet,
+      diadiemthamquan: tour.diadiemthamquan,
+      phuongtiendichuyen: tour.phuongtiendichuyen,
+      khachsan: tour.khachsan,
+      lichtrinh: tour.lichtrinh,
+      giatiennguoilon: tour.giatiennguoilon,
+      giatientreem: tour.giatientreem,
+      giatientrenho: tour.giatientrenho,
+      giatienembe: tour.giatienembe,
+      quocgia: tour.quocgia,
+      khuvuc: tour.khuvuc
+    })
+
   }
 
 

@@ -1,4 +1,5 @@
 export interface Tour {
+    _id: string;
     ten_tour: string;
     images: string;
     ma_tour: string;

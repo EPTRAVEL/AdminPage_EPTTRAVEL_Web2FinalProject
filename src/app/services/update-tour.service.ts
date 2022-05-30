@@ -30,8 +30,10 @@ export class UpdateTourService {
     )
   }
 
-
+  updateTour(id: string, data: any) {
+    return this._http.patch(`${this.base_url}/Tours/${id}`, data);
+  }
   removeTour(id: any) {
-    return this._http.delete(`${this.base_url}/tours/${id}`);
+    return this._http.delete(`${this.base_url}/Tours/${id}`);
   }
 }

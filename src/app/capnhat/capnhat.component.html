@@ -24,10 +24,11 @@
         <div class="row m-2 ">
             <div class="col-md-8 bg-white rounded ">
                 <form [formGroup]="tourForm" (ngSubmit)="SubmitToUpdateTour(tourForm.value)">
+                    <input formControlName="_id"  type="text" class="d-none"> 
                     <h6 class="text-center ">Thông tin</h6>
                     <div class="mb-3 row ">
                         <label class="col-2 " for="tentour ">Tên tour </label>
-                        <input class="col-10 w-90 " type="text "  formControlName="ten_tour" name="ten_tour" id="tentour ">
+                        <input class="col-10 w-90 " type="text"  formControlName="ten_tour" name="ten_tour" id="tentour">
                     </div>
                     <div class="mb-3 row ">
                         <div class="cl-1 col-6 ">
@@ -111,18 +112,7 @@
                             <div class="col-1 col-2 ">
                               <input type="file" name="tourImg" id=""  (change)="onChange($event)" formControlName="tourImg" multiple>
                             </div>
-                            <!-- <div class="col-1 col-2 ">
-                              <input type="file" name="tourImg2" id="" (change)="onChange2($event)" formControlName="tourImg2">
-                            </div>
-                            <div class="col-1 col-2 ">
-                              <input type="file" name="tourImg3" id="" (change)="onChange3($event)" formControlName="tourImg3">
-                            </div>
-                            <div class="col-1 col-2 ">
-                              <input type="file" name="tourImg4" id="" (change)="onChange4($event)" formControlName="tourImg4">
-                            </div>
-                            <div class="col-1 col-2 ">
-                              <input type="file" name="tourImg5" id="" (change)="onChange5($event)" formControlName="tourImg5">
-                            </div> -->
+                      
                         </div>
                     </div>
                     <div class="mt-3 text-center ">
@@ -133,7 +123,8 @@
             <div class="col-md-4 bg-white tourThem">
                 <h6 class="text-center ">Tour đã thêm</h6>
                 <div class="tour-item" *ngFor="let t of allTour">
-                    <img src="{{base_url+t.images[1]}}" alt="error">
+                    
+                    <img src="{{base_url+t.images[0]}}" alt="error">
                     <div>{{t.ten_tour}}</div>
                     <div class="button-group">
                         <button class="btn btn-primary" (click)="editTour(t)" >
