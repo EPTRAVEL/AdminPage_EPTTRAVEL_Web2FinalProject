@@ -37,3 +37,22 @@
    border: none;
    font-weight: bold;
 }
+.ctkh-rp{
+    flex-direction: row;
+}
+@media screen and (max-width:1000px){
+    .img_ctkh{
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+    }
+    .ctkh-rp{
+        flex-direction: column;
+    }
+    .ctkh{
+        width: 100%;
+    }
+    .ctkh_1{
+        width: 100%;
+    }
+     }
