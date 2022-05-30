@@ -35,7 +35,7 @@ select {
   color: white;
   border: none;
   border-radius: 5px;
-  height: 30px;
+  line-height: 30px;
 }
 .images-banner_trangchu {
   background-color: #e1ebff;
@@ -73,6 +73,23 @@ select {
 }
 .images-admin {
   margin-left: 2px;
+}
+.form-bg{
+  background-color: #ffffff;
+  border: 0px;
+  border-radius: 3px;
+}
+.btn-style-add{
+  background-color: #3a36db;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+}
+.btn-style{
+  background-color: #d2def5;
+  color: #3a36db;
+  text-align: center;
+  line-height: 25px;
 }
 .form-style {
   display: flex;
@@ -136,7 +153,7 @@ input[type="file"] {
 }
 .tourThem{
     height: 550px;
-    background-color: red;
+    /* background-color: red; */
     overflow-y: scroll;
 
 }
