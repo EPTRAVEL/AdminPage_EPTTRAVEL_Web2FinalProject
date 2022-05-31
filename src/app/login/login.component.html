@@ -9,10 +9,10 @@
             <div class="form-login" style="background-color: #fff; padding: 30px 40px;">
                 <div class="header-icon text-center">
                
-                    <h2>Log in</h2>
+                    <h2>Đăng nhập</h2>
                 </div>
                 
-                <form action="">
+                <form  [formGroup]="regForm" action="">
                     <div class="mb-3">
                         <label for="email" class="form-label font">Email Address</label>
                         <input type="email" class="form-control" id="email" placeholder="example@gmail.com">

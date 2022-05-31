@@ -1,13 +1,49 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
+
             <div class="user-list-card">
-                <div class="user-card">
-                    <img src="../assets/images/logo/logo.png" class="avarta" alt="">
-                    <p class="username">
-                        User Name
-                    </p>
+                <h3>Messages</h3>
+                <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Tìm kiếm" aria-label="Search"
+                        aria-describedby="search-addon" />
+
                 </div>
+                <div>
+                    <ul class="list">
+                        <li class="list-group-item rounded pt-1">
+                            <a id="all" class="nav" role="tab" arial-controls="all" arial-selected="true"
+                                (click)="selectAll()">Tất cả</a>
+                        </li>
+                        <li class="list-group-item rounded pt-1">
+                            <a id="all" class="nav" role="tab" arial-controls="personal" (click)="selectPersonal()">Cá
+                                nhân</a>
+                        </li>
+                        <li class="list-group-item rounded pt-1">
+                            <a id="all" class="nav" role="tab" arial-controls="unread" (click)="selectUnread()">Nhóm</a>
+                        </li>
+                    </ul>
+                </div>
+                <router-outlet></router-outlet>
+                <div *ngIf="all; then ShowAll;"></div>
+                <div *ngIf="personal; then ShowPersonal"></div>
+                <div *ngIf="unread; then ShowUnread"></div>
+                <ng-template #ShowAll>
+                    <div class="user-card">
+                        <img src="../assets/images/logo/logo.png" class="avarta" alt="">
+                        <p class="username">
+                            User Name
+                        </p>
+                    </div>
+                </ng-template>
+                <ng-template #ShowPersonal>
+
+                </ng-template>
+                <ng-template #ShowUnread>
+        
+                </ng-template>
+
+                
             </div>
         </div>
         <div class="col-md-8">
@@ -22,7 +58,7 @@
                     <div class="chat-body">
                         <div>
                             <p class="message-container">
-                                d,m masmdklaal
+                                ét ô ét
                             </p>
                         </div>
                     </div>
@@ -34,7 +70,7 @@
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-primary btn-sm px-3" >Gửi</button>
+                                <button class="btn btn-primary btn-sm px-3">Gửi</button>
                             </div>
                         </div>
                     </div>

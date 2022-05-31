@@ -8,8 +8,10 @@ body{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    height: calc(100vh- 100px);
+    height: 600px;
     padding: 10px;
+    margin: 20px 0;
+    overflow-y:scroll;
    
 }
 .user-card{
@@ -46,6 +48,7 @@ body{
     height: calc(100vh- 100px);
     position: relative;
     overflow: hidden;
+    margin:  20px 0;
 }
 .chat-header{
     height: 70px;
@@ -72,8 +75,10 @@ body{
 }
 .chat-body{
     background-color: #fff;
-    height: calc(100vh-125px);
-    overflow-y: auto;
+    height: 550px;
+    overflow-y: scroll;
+
+
 }
 .message-container{
     background-color: #fff;
@@ -89,4 +94,31 @@ body{
 }
 .same-user .message-container{
     background-color: rgb(147, 147, 226);
+}
+.chat-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(223, 223, 223);
+    padding: 10px 20px;
+}
+.form-control{
+    background-color: white;
+    border: 1px solid #bbbb;
+}
+.list {
+    display: flex;
+    margin: 20px 0;
+    height: 30px;
+}
+.list-group-item {
+    border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list-group-item a{
+    text-decoration: none;
+
 }
