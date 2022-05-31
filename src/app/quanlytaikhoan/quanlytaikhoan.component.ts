@@ -9,6 +9,7 @@ import { UserService } from '../services/user.service';
 export class QuanlytaikhoanComponent implements OnInit {
   userData: any;
   errorMsg: string = '';
+ 
   constructor(private _service: UserService) { }
 
   ngOnInit(): void {

@@ -16,6 +16,12 @@ export class UserService {
         retry(2), catchError(this.handleError)
       )
   }
+  getUserById(id: any): Observable<User_reg[]> {
+    return this._http.get<User_reg[]>(`${this.url}/${id}`)
+      .pipe(
+        retry(2), catchError(this.handleError)
+      )
+  }
   handleError(err: HttpErrorResponse) {
     return throwError(() => new Error(err.message)
     )

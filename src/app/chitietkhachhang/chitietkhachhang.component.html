@@ -9,13 +9,13 @@
     <span class="mb-3" style="font-size: 20px"> <b> CHI TIẾT TÀI KHOẢN KHÁCH HÀNG </b> </span>
     <div class="container"  style="width:80% ;">
         <div class="d-flex justify-content-center">
-            <img class="img_ctkh" src="..\assets\images\IMAGE\Vision.jpg">
+            <img class="img_ctkh" src="{{base_url+userData.avarImg}}">
         </div>
         <form>
             <div class="row mt-lg-5 ctkh-rp">
                 <div class="col p-3">
-                    <p class="font_bold">Tên</p>
-                    <input name="tenkh" id="tenkh" class="ctkh" placeholder="Họ và tên">
+                    <p class="font_bold">Họ tên</p>
+                    <input name="tenkh" id="tenkh" class="ctkh" placeholder="Họ và tên" value="{{userData.hoTen}}">
                 </div>
                 <div class="col  p-3">
                     <p class="font_bold" for="tenkh" id="tenkh">Giới tính</p>
@@ -29,17 +29,17 @@
             <div class="row mt-2 ctkh-rp">
                 <div class="col p-3">
                     <p class="font_bold">Email</p>
-                    <input name="email" id="email" class="ctkh" placeholder="Example@gmail.com">
+                    <input name="email" id="email" class="ctkh" placeholder="Example@gmail.com" value="{{userData.email}}">
                 </div>
                 <div class="col p-3">
                     <p class="font_bold">Số điện thoại</p>
-                    <input name="sdt" id="sdt" class="ctkh" placeholder="Số điện thoại">
+                    <input name="sdt" id="sdt" class="ctkh" placeholder="Số điện thoại" value="{{userData.diDong}}">
                 </div>
             </div>
             <div class="row mt-2 ctkh-rp"> 
                 <div class="col p-3">
                     <p class="font_bold">Địa chỉ</p>
-                    <input name="diachi" id="diachi" class="ctkh_1" placeholder="Địa chỉ">
+                    <input name="diachi" id="diachi" class="ctkh_1" placeholder="Địa chỉ" value="{{userData.diaChi}}">
                 </div>
             </div>
         </form>

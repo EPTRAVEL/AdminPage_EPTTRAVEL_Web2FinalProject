@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CaidatComponent } from './caidat/caidat.component';
 import { CapnhatComponent } from './capnhat/capnhat.component';
+import { ChitietkhachhangComponent } from './chitietkhachhang/chitietkhachhang.component';
 import { HoadonComponent } from './hoadon/hoadon.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'quanlytaikhoan',
     component: QuanlytaikhoanComponent,
+  },
+  {
+    path: 'quanlytaikhoan/:userId',
+    component: ChitietkhachhangComponent,
   },
   {
     path: 'messages',
