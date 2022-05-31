@@ -17,13 +17,13 @@ export class ThongbaoComponent implements OnInit {
   }
   selectRecent() {
     this.all = false;
-    this.recent = false;
-    this.unread = true;
+    this.recent = true;
+    this.unread = false;
   }
   selectUnread() {
     this.all = false;
-    this.recent = true;
-    this.unread = false;
+    this.recent = false;
+    this.unread = true;
   }
 
   constructor() { }
