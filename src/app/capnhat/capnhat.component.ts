@@ -33,7 +33,8 @@ export class CapnhatComponent implements OnInit {
     giatientrenho: [''],
     giatienembe: [''],
     quocgia: [''],
-    khuvuc: ['']
+    khuvuc: [''],
+    giamgia: [''],
   }
   
 
@@ -82,6 +83,9 @@ export class CapnhatComponent implements OnInit {
     formData.append('giatienembe', data.giatienembe);
     formData.append('quocgia', data.quocgia);
     formData.append('khuvuc', data.khuvuc);
+    formData.append('giamgia', data.giamgia);
+
+   
 
     if (this.tourImg != null || this.tourImg != undefined) {
       for (let i = 0; i < this.tourImg.length; i++) {
