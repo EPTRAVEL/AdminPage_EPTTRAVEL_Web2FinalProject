@@ -4,7 +4,10 @@ nav {
     display: block;
 }
 
-
+.logo{
+    width: 100%;
+margin-left: 10px;
+}
 a {
     color: #3f84fc;
     text-decoration: none;
@@ -27,8 +30,8 @@ h1, .h1 {
     min-height: 100vh;
 }
 
-.dashboard-nav {
-    min-width: 238px;
+/* .dashboard-nav {
+    min-width: 150px;
     position: fixed;
     left: 0;
     top: 0;
@@ -36,7 +39,7 @@ h1, .h1 {
     overflow: auto;
     background-color: #373193;
     transition: ease-in-out 0.5s;    
-}
+} */
 nav ul{
     width: 100%;
     list-style: none;
@@ -47,7 +50,7 @@ nav ul{
 nav ul li a{
     width: 100%;
     color: rgb(58, 50, 50);
-    font-size: 1.2em;
+    font-size: 0.8em;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -78,10 +81,6 @@ color: rgb(0, 0, 0);
     align-items: center;
 }
 
-.dashboard-nav header .menu-toggle {
-    display: none;
-    margin-right: auto;
-}
 
 .dashboard-nav a {
     color: #515151;
@@ -142,10 +141,11 @@ color: rgb(0, 0, 0);
 
 
 .nav-item-divider {
-    position : absolute;
+    position : fixed;
     bottom: 0;
-    width: 100%;
+    width: 15%;
     background-color: rgba(236, 238, 239, 0.3);
+ 
 }
 
 @media screen and (max-width:1200px){
