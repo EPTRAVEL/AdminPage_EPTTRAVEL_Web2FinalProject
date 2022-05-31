@@ -18,8 +18,8 @@
         <tr routerLink="/quanlytaikhoan/{{u._id}}" routerLinkActive="active" class="bg-white mt-1 text-center list-user" *ngFor="let u of userData">
             <!-- <td><input type="checkbox"></td> -->
             <!-- <td>#83876364</td> -->
-            <td><img src="http://localhost:8000/avatar user/{{u.avarImg}}" alt="Avatar" class="avatar">{{u.
-                hoTen}}</td>
+            <td class="left-align"><img src="http://localhost:8000/avatar user/{{u.avarImg}}" alt="Avatar" class="avatar">{{u. hoTen}}
+            </td>
             <td>{{u.email}}</td>
             <td>{{u.diDong}}</td>
             <td>{{u.gioiTinh}}</td>
@@ -27,8 +27,7 @@
                 <div class="status w-100 rounded-pill p-1">ĐÃ XÁC NHẬN</div>
             </td>
             <td>
-                <button class="btn btn-outline-light text-center" data-bs-toggle="modal"
-                    data-bs-target="#myModal">...</button>
+                <button class="btn btn-outline-light text-center" data-bs-toggle="modal" data-bs-target="#myModal">...</button>
                 <div class="modal" id="myModal">
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">

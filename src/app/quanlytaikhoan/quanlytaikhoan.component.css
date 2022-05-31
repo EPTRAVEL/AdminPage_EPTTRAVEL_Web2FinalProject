@@ -48,7 +48,12 @@
     overflow: auto;
     overflow-y: auto;
 }
-.list-user:hover{
+
+.list-user:hover {
     background-color: rgba(255, 0, 0, 0.1) !important;
     cursor: pointer;
+}
+
+.left-align {
+    text-align: left;
 }
