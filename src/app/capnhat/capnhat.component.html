@@ -3,15 +3,13 @@
 <!-- menu -->
 <ul class="list ">
     <li class="list-group-item rounded pt-0">
-        <a id="tour-dulich" class="nav-link " role="tab" aria-controls="tour" aria-selected="true"
-            (click)="selectTour()">Tour</a>
+        <a id="tour-dulich" class="nav-link " role="tab" aria-controls="tour" aria-selected="true" (click)="selectTour()">Tour</a>
     </li>
     <li class="list-group-item rounded pt-0">
         <a class="nav-link" (click)="selectTinTuc()">Tin tức</a>
     </li>
     <li class="list-group-item rounded pt-0" ui-route="images" ng-class="{active: $uiRoute}">
-        <a id="image-khac" class="nav-link" role="tab" aria-controls="images" aria-selected="true"
-            (click)="selectHinhAnh()">Hình
+        <a id="image-khac" class="nav-link" role="tab" aria-controls="images" aria-selected="true" (click)="selectHinhAnh()">Hình
             ảnh</a>
     </li>
 </ul>
@@ -32,8 +30,7 @@
                         <h5 class="text-center ">Thông tin</h5>
                         <div class="mb-3 row ">
                             <label class="col-2 " for="tentour ">Tên tour </label>
-                            <input class="col-10 w-90 " type="text" formControlName="ten_tour" name="ten_tour"
-                                id="tentour">
+                            <input class="col-10 w-90 " type="text" formControlName="ten_tour" name="ten_tour" id="tentour">
                         </div>
                         <div class="mb-3 row ">
                             <div class="cl-1 col-md-6 ">
@@ -53,9 +50,9 @@
                                     <label class="col-6 " for="cho ">Phương tiện </label>
                                     <select class=" col-6 w-50 h-1 form-select ">
                                         <option selected></option>
-                                        <option value="1 ">Xe máy</option>
-                                        <option value="2 ">Xe hơi</option>
-                                        <option value="3 ">Xe bus</option>
+                                        <option value="1 ">Máy bay</option>
+                                        <option value="2 ">Xe Bus</option>
+                                        <option value="3 ">Cả hai</option>
                                     </select>
                                 </div>
                             </div>
@@ -80,18 +77,17 @@
                         </div>
                         <h5 class="text-center ">Giá vé</h5>
                         <div class="mb-3 row ">
-                            <div class="col-1 col-md-6 ">
+                            <div class=" col-md-6 ">
                                 <div class="row mt-3">
                                     <label class="col-4 " for="giavenl ">Người lớn</label>
-                                    <input class="col-8 " formControlName="giatiennguoilon" type="number "
-                                        id="giavenl ">
+                                    <input class="col-8 " formControlName="giatiennguoilon" type="number " id="giavenl ">
                                 </div>
                                 <div class="row mt-3 ">
                                     <label class="col-4 " for="giavetn ">Trẻ nhỏ</label>
                                     <input class="col-8 " formControlName="giatientrenho" type="number " id="giavetn ">
                                 </div>
                             </div>
-                            <div class="col-2 col-md-6 ">
+                            <div class=" col-md-6 ">
                                 <div class="row mt-3 ">
                                     <label class="col-4 " for="giavete ">Trẻ em</label>
                                     <input class="col-8 " formControlName="giatientreem" type="number " id="giavete ">
@@ -105,23 +101,19 @@
                         <h5 class="text-center ">Mô tả</h5>
                         <div class="row mt-3 ">
                             <label class="col-2 " for="lichtrinh ">Lịch trình</label>
-                            <textarea class=" col-10 w-75 form-control " formControlName="lichtrinh" id="lichtrinh "
-                                rows="4 "></textarea>
+                            <textarea class=" col-10 w-75 form-control " formControlName="lichtrinh" id="lichtrinh " rows="4 "></textarea>
                         </div>
                         <div class="row mt-3 ">
                             <label class="col-2 " for="diadiemthamquan ">Địa điểm tham quan</label>
-                            <textarea class=" col-10 w-75 form-control " formControlName="diadiemthamquan"
-                                id="diadiemthamquan " rows="3 " ></textarea>
+                            <textarea class=" col-10 w-75 form-control " formControlName="diadiemthamquan" id="diadiemthamquan " rows="3 "></textarea>
                         </div>
                         <div class="row mt-3 ">
                             <div class="col-1 col-2 ">
                             </div>
-                            <div class="col-2 col-10 row update_hinhanh justify-content-around ">
-                                <div class="col-1 col-2 ">
-                                    <input type="file" name="tourImg" id="" (change)="onChange($event)"
-                                        formControlName="tourImg" multiple>
+                            <div class="col-1  row update_hinhanh justify-content-around ">
+                                <div class="col-1">
+                                    <input type="file" name="tourImg" id="" (change)="onChange($event)" formControlName="tourImg" multiple>
                                 </div>
-
                             </div>
                         </div>
                         <div class="mt-3 text-center ">
@@ -134,16 +126,33 @@
             <div class="col-lg-4 tourThem">
                 <div class="border border-3 form-bg" style="padding: 15px;">
                     <h5 class="text-center ">Tour đã thêm</h5>
-                    <div class="tour-item" *ngFor="let t of allTour">
-
-                        <img src="{{base_url+t.images[0]}}" alt="error">
-                        <div>{{t.ten_tour}}</div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" (click)="editTour(t)">
-                                <i class="bi bi-pen-fill"></i> Sửa
+                    <div class="mt-3" *ngFor="let t of allTour">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="{{base_url+t.images[0]}}" alt="error" class="mx-auto d-block text-center style--img " style="width:100% !important ">
+                            </div>
+                            <div class="col-6">
+                                <h5 style="text-align:left; ">{{t.ten_tour}}</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <button class="btn btn-style col-4" style="margin: 5px " (click)="editTour(t) ">
+                                <svg xmlns=" http://www.w3.org/2000/svg " width="25" height="12" fill="currentColor "
+                                    class="bi bi-pencil-fill " viewBox="0 0 16 16 ">
+                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468
+                                7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z " />
+                                </svg>
+                                Sửa
                             </button>
-                            <button class="btn btn-primary" (click)="removeTour(t)">
-                                <i class="bi bi-eraser-fill"></i> Xóa
+                            <button class="btn btn-style col-4" style="margin: 5px " (click)="removeTour(t) ">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="25 " height="16 " fill="currentColor "
+                                    class="bi bi-trash3-fill " viewBox="0 0 16 16 ">
+                                    <path
+                                        d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5
+                                0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z " />
+                                </svg>
+                                Xóa
                             </button>
                         </div>
                     </div>
@@ -160,38 +169,38 @@
 
 <ng-template #tt>
     <div class="container ">
-        <div class="row mt-3">
-            <div class="col-lg-8">
-                <form action="">
-                    <div class="border border-3 form-bg" style="padding: 15px;">
-                        <h5 class="text-center">Tin tức</h5>
-                        <div class="row mt-3">
-                            <label class="col-2" for="tieude">Tiêu đề</label>
-                            <input class="col-10 " type="text" id="tieude">
+        <div class="row mt-3 ">
+            <div class="col-lg-8 ">
+                <form action=" ">
+                    <div class="border border-3 form-bg " style="padding: 15px; ">
+                        <h5 class="text-center ">Tin tức</h5>
+                        <div class="row mt-3 ">
+                            <label class="col-2 " for="tieude ">Tiêu đề</label>
+                            <input class="col-10 " type="text " id="tieude ">
                         </div>
-                        <div class=" form-style mt-3">
+                        <div class=" form-style mt-3 ">
                             <div class="row style--left ">
-                                <label class="col-4" for="ngaydang">Ngày đăng</label>
-                                <input class="col-8" type="date" id="ngaydang">
+                                <label class="col-4 " for="ngaydang ">Ngày đăng</label>
+                                <input class="col-8 " type="date " id="ngaydang ">
                             </div>
-                            <div class="row style--right">
-                                <label class="col-4" for="idtintuc">ID tin tức</label>
-                                <input class="col-8" type="text" id="idtintuc">
+                            <div class="row style--right ">
+                                <label class="col-4 " for="idtintuc ">ID tin tức</label>
+                                <input class="col-8 " type="text " id="idtintuc ">
                             </div>
                         </div>
 
-                        <div class="mt-3">
-                            <label for="gioithieu">Đoạn giới thiệu</label>
-                            <textarea class="form-control" id="gioithieu" rows="4 "></textarea>
+                        <div class="mt-3 ">
+                            <label for="gioithieu ">Đoạn giới thiệu</label>
+                            <textarea class="form-control " id="gioithieu " rows="4 "></textarea>
                         </div>
 
-                        <div class="mt-3">
-                            <label for="noidung">Nội dung tin tức</label>
-                            <textarea class="form-control " id="noidung" rows="4"> </textarea>
+                        <div class="mt-3 ">
+                            <label for="noidung ">Nội dung tin tức</label>
+                            <textarea class="form-control " id="noidung " rows="4 "> </textarea>
                         </div>
 
-                        <div class="mt-3">
-                            <label for="themanh">Thêm hình ảnh</label>
+                        <div class="mt-3 ">
+                            <label for="themanh ">Thêm hình ảnh</label>
                         </div>
                         <div class="row mt-3 ">
                             <div class="col-1 col-2 ">
@@ -214,12 +223,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3">
-                            <button class="btn btn-style-add">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-plus" viewBox="0 0 16 16">
+                        <div class="text-center mt-3 ">
+                            <button class="btn btn-style-add ">
+                                <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor "
+                                    class="bi bi-plus " viewBox="0 0 16 16 ">
                                     <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z " />
                                 </svg>
                                 Thêm tin tức
                             </button>
@@ -228,30 +237,31 @@
                 </form>
             </div>
 
-            <div class="col-lg-4">
-                <div class="border border-3 form-bg" style="padding: 15px;">
+            <div class="col-lg-4 ">
+                <div class="border border-3 form-bg " style="padding: 15px; ">
                     <h5>Tin đã thêm </h5>
-                    <div class="form-style mt-3">
+                    <div class="form-style mt-3 ">
                         <div class="style--left ">
-                            <img src="./assets/images/IMAGE/SanPham/TrongNuoc/MienTrung/DaNang/DaNang1.jpg"
-                                class="mx-auto d-block text-center style--img" style="width:100% !important">
+                            <img src="./assets/images/IMAGE/SanPham/TrongNuoc/MienTrung/DaNang/DaNang1.jpg " class="mx-auto d-block text-center style--img " style="width:100% !important ">
                         </div>
-                        <div class="style--right2">
-                            <h5 style="text-align:left;"> Bí kíp du lịch những ngày cuối năm</h5>
+                        <div class="style--right2 ">
+                            <h5 style="text-align:left; "> Bí kíp du lịch những ngày cuối năm</h5>
                             <div>
-                                <button class="btn btn-style" style="margin: 5px">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                <button class="btn btn-style " style="margin: 5px ">
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor "
+                                        class="bi bi-pencil-fill " viewBox="0 0 16 16 ">
                                         <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468
+                                7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z " />
                                     </svg>
                                     Sửa
                                 </button>
-                                <button class="btn btn-style" style="margin: 5px">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                <button class="btn btn-style " style="margin: 5px ">
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor "
+                                        class="bi bi-trash3-fill " viewBox="0 0 16 16 ">
                                         <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5
+                                0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z " />
                                     </svg>
                                     Xóa
                                 </button>
@@ -269,101 +279,101 @@
 
 <!-- Cập nhật hình ảnh -->
 <ng-template #ha>
-    <div class="container" id="images" aria-labelledby="image-khac">
+    <div class="container " id="images " aria-labelledby="image-khac ">
         <div class="row m-2 ">
             <div class="col-lg-8 ">
-                <div class="border border-3 form-bg" style="padding: 15px;">
-                    <h5 class="text-center">Hình ảnh</h5>
+                <div class="border border-3 form-bg " style="padding: 15px; ">
+                    <h5 class="text-center ">Hình ảnh</h5>
                     <form>
-                        <div class="row">
-                            <div class="row">
-                                <label for="banner_trangchu">Banner Trang chủ</label>
+                        <div class="row ">
+                            <div class="row ">
+                                <label for="banner_trangchu ">Banner Trang chủ</label>
                             </div>
-                            <div class="row  images-banner_trangchu  justify-content-around">
-                                <div class="col">
-                                    <img src="">
+                            <div class="row images-banner_trangchu justify-content-around ">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
                             </div>
-                            <div class="row">
-                                <button class="bi bi-plus images-plus"> Thêm ảnh</button>
+                            <div class="row ">
+                                <button class="bi bi-plus images-plus "> Thêm ảnh</button>
                             </div>
                         </div>
 
-                        <div class="row images-row">
-                            <label for="banner_khuyenmai">Banner Khuyến Mãi</label>
-                            <div class="row  images-banner_trangchu  justify-content-around">
-                                <div class="col">
-                                    <img src="">
+                        <div class="row images-row ">
+                            <label for="banner_khuyenmai ">Banner Khuyến Mãi</label>
+                            <div class="row images-banner_trangchu justify-content-around ">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
-                                <div class="col">
-                                    <img src="">
+                                <div class="col ">
+                                    <img src=" ">
                                 </div>
                             </div>
-                            <div class="row"> <button class="bi bi-plus images-plus"> Thêm ảnh</button></div>
+                            <div class="row "> <button class="bi bi-plus images-plus "> Thêm ảnh</button></div>
                         </div>
 
-                        <div class="row images-row">
-                            <div class="row">
-                                <label for="admin">Đội ngũ admin</label>
+                        <div class="row images-row ">
+                            <div class="row ">
+                                <label for="admin ">Đội ngũ admin</label>
                             </div>
-                            <div class="row  images-banner_trangchu  justify-content-around ">
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                            <div class="row images-banner_trangchu justify-content-around ">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
-                                <div class="col images-admin">
-                                    <img style="width:90px" src="">
+                                <div class="col images-admin ">
+                                    <img style="width:90px " src=" ">
                                 </div>
                             </div>
-                            <div class="row"><button class="bi bi-plus images-plus"> Thêm ảnh</button></div>
+                            <div class="row "><button class="bi bi-plus images-plus "> Thêm ảnh</button></div>
                         </div>
-                        <div class="row images-row">
-                            <div class="col-3">
-                                <label for="tour_trong">Ảnh tour trong nước</label>
-                                <div class="images-banner_trangchu">
-                                    <img src="" alt="">
+                        <div class="row images-row ">
+                            <div class="col-3 ">
+                                <label for="tour_trong ">Ảnh tour trong nước</label>
+                                <div class="images-banner_trangchu ">
+                                    <img src=" " alt=" ">
                                 </div>
                             </div>
-                            <div class="col-3">
-                                <label for="tour_ngoai">Ảnh tour ngoài nước</label>
-                                <div class="images-banner_trangchu">
-                                    <img src="" alt="">
+                            <div class="col-3 ">
+                                <label for="tour_ngoai ">Ảnh tour ngoài nước</label>
+                                <div class="images-banner_trangchu ">
+                                    <img src=" " alt=" ">
                                 </div>
 
                             </div>
-                            <div class="row"><button class="bi bi-plus images-plus "> Thêm ảnh</button></div>
+                            <div class="row "><button class="bi bi-plus images-plus "> Thêm ảnh</button></div>
 
                         </div>
 
@@ -372,60 +382,60 @@
             </div>
 
             <div class="col-lg-4 ">
-                <div class="border border-3 form-bg" style="padding: 15px;">
+                <div class="border border-3 form-bg " style="padding: 15px; ">
                     <h5 class="text-center ">Ảnh đã thêm</h5>
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-4">
-                            <img src="">
+                    <div class="row " style="margin-top: 20px; ">
+                        <div class="col-4 ">
+                            <img src=" ">
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             <p>Banner - Ảnh đã thêm</p>
                         </div>
                         <div>
-                            <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                            <button class="bi bi-trash-fill images-button-bin "> Xóa</button>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-4">
-                            <img src="">
+                    <div class="row " style="margin-top: 20px; ">
+                        <div class="col-4 ">
+                            <img src=" ">
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             <p>Banner Khuyến Mãi - Ảnh đã thêm</p>
                         </div>
                         <div>
-                            <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                            <button class="bi bi-trash-fill images-button-bin "> Xóa</button>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-4">
-                            <img src="">
+                    <div class="row " style="margin-top: 20px; ">
+                        <div class="col-4 ">
+                            <img src=" ">
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             <p>Đội ngũ Admin - Ảnh đã thêm</p>
                         </div>
                         <div>
-                            <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                            <button class="bi bi-trash-fill images-button-bin "> Xóa</button>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-4">
-                            <img src="">
+                    <div class="row " style="margin-top: 20px; ">
+                        <div class="col-4 ">
+                            <img src=" ">
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             <p>Tour trong nước - Ảnh đã thêm</p>
                         </div>
                         <div>
-                            <button class="bi bi-trash-fill images-button-bin"> Xóa</button>
+                            <button class="bi bi-trash-fill images-button-bin "> Xóa</button>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-4">
-                            <img src="">
+                    <div class="row " style="margin-top: 20px; ">
+                        <div class="col-4 ">
+                            <img src=" ">
                         </div>
-                        <div class="col">
+                        <div class="col ">
                             <p>Tour ngoài nước - Ảnh đã thêm</p>
                         </div>
                         <div>
