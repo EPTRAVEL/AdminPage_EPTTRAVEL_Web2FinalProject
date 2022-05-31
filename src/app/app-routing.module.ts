@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CaidatComponent } from './caidat/caidat.component';
 import { CapnhatComponent } from './capnhat/capnhat.component';
+import { ChitiethoadonComponent } from './chitiethoadon/chitiethoadon.component';
 import { ChitietkhachhangComponent } from './chitietkhachhang/chitietkhachhang.component';
 import { HoadonComponent } from './hoadon/hoadon.component';
 import { LoginComponent } from './login/login.component';
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: 'messages',
     component: MessagesComponent,
+  },
+  {
+    path: 'chitiethoadon',
+    component: ChitiethoadonComponent,
   },
   {
     path: 'hoadon',
