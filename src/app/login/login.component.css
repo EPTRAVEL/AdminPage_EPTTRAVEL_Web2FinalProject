@@ -7,14 +7,25 @@
     
     
 }
+.font{
+    font-weight: bold;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    
+    padding: 135px;
+}
 .form-login{
     display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 900px;
+  
   padding: 30px;
 }
-
+.header-icon h2{
+    padding: 30px;
+}
 a{
     text-decoration: none;
     font-weight: bold;
@@ -30,30 +41,6 @@ background-color: #F1F4FA;
 .check-reset{
     display: flex;
     justify-content: space-between;
-}
-.division {
-    float: none;
-    margin: 0 auto 18px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-.division .line {
-    border-top: 1px solid #DFDFDF;
-    position: absolute;
-    top: 12px;
-    width: 45%;
-}
-.division .line.l {
-    left: 0;
-}
-.division .line.r {
-    right: 0;
-}
-.division span {
-    color: #424242;
-    font-size: 17px;
 }
 .login-btn{
     width: 80%;

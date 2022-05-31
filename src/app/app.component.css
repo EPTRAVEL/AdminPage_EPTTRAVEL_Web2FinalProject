@@ -1,0 +1,7 @@
+.body-rt{
+    left: 250px;
+    width: calc(100%-300px);
+    min-height: 100vh;
+    align-items: center;
+    transition: ease-in-out 0.3s;
+}

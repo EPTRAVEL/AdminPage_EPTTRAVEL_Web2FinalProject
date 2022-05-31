@@ -1,0 +1,92 @@
+body{
+    background-color: #fff;
+}
+.container{
+    overflow: hidden;
+}
+.user-list-card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: calc(100vh- 100px);
+    padding: 10px;
+   
+}
+.user-card{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+.active{
+        background-color: rgb(190, 187, 187);
+}
+.avarta{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 15px  0 0;
+
+}
+.username{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-card:not(:last-child){
+    border-bottom: 1px solid #bbbb;
+}
+.chat-container{
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: calc(100vh- 100px);
+    position: relative;
+    overflow: hidden;
+}
+.chat-header{
+    height: 70px;
+    background-color: rgb(243, 241, 241);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.chat-header .avarta{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 20px;
+
+}
+.chat-header .username{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-body{
+    background-color: #fff;
+    height: calc(100vh-125px);
+    overflow-y: auto;
+}
+.message-container{
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 90%;
+    margin-bottom: 15px;
+}
+.same-user{
+    display: flex;
+    justify-content: flex-end;
+}
+.same-user .message-container{
+    background-color: rgb(147, 147, 226);
+}

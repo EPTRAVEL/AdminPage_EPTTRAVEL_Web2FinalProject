@@ -44,7 +44,7 @@ import { ChitietkhachhangComponent } from './chitietkhachhang/chitietkhachhang.c
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
