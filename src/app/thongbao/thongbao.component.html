@@ -1,1 +1,78 @@
-<p>thongbao works!</p>
+<div class="container-fluid bg-white mt-3">
+    <div class="d-flex flex-column m-3">
+        <div class="content mb-3">Thông báo</div>
+        <div class="input-group">
+            <input type="search" class="form-control rounded" placeholder="Tìm kiếm" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">search</button>
+        </div>
+        <div>
+            <ul class="list">
+                <li class="list-group-item rounded pt-1">
+                    <a id="all" class="nav" role="tab" arial-controls="all" arial-selected="true" (click)="selectAll()">Tất cả</a>
+                </li>
+                <li class="list-group-item rounded pt-1">
+                    <a id="all" class="nav" role="tab" arial-controls="recent" (click)="selectRecent()">Gần đây</a>
+                </li>
+                <li class="list-group-item rounded pt-1">
+                    <a id="all" class="nav" role="tab" arial-controls="unread" (click)="selectUnread()">Chưa đọc</a>
+                </li>
+            </ul>
+        </div>
+        <router-outlet></router-outlet>
+        <div *ngIf="all; then ShowAll;"></div>
+        <div *ngIf="recent; then ShowRecent"></div>
+        <div *ngIf="unread; then ShowUnread"></div>
+        <ng-template #ShowAll>
+            <table class="table table table-borderless">
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour PHÚ QUỐC - 3 NGÀY 2 ĐÊM đã được thêm ở trang Tour du lịch bởi Nguyen Dang Khoa</span></td>
+                    <td width="10%" class="time">20:11</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tin tức: Những kiến trúc độc đáo thu hút khách du lịch ở Mỹ đã được thêm ở trang Tin Tức Du lịch bởi Truong Thanh L...</span></td>
+                    <td width="10%" class="time">19:00</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour khuyến mãi : VŨNG TÀU - BIỂN HÁT đã được chỉnh sửa ở trang Khuyến Mãi bởi Lê Mai Ngọc Thy</span></td>
+                    <td width="10%" class="time">28 thg 04</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour Hà Nội - Bái Đình - Tràng An - Hạ Long - Yên Tử đã được cập nhật hình ảnh ở trang Tour du lịch bởi Phan Thị Lê H...</span></td>
+                    <td width="10%" class="time">27 thg 04</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour Hà Nội - Bái Đình - Tràng An - Hạ Long - Yên Tử đã được cập nhật hình ảnh ở trang Tour du lịch bởi Phan Thị Lê H...</span></td>
+                    <td width="10%" class="time">27 thg 04</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour Hà Nội - Bái Đình - Tràng An - Hạ Long - Yên Tử đã được cập nhật hình ảnh ở trang Tour du lịch bởi Phan Thị Lê H...</span></td>
+                    <td width="10%" class="time">27 thg 04</td>
+                </tr>
+                <tr>
+                    <td width="5%"><input type="checkbox"></td>
+                    <td width="5%">&#9825;</td>
+                    <td width="80%"><span>Tour Hà Nội - Bái Đình - Tràng An - Hạ Long - Yên Tử đã được cập nhật hình ảnh ở trang Tour du lịch bởi Phan Thị Lê H...</span></td>
+                    <td width="10%" class="time">27 thg 04</td>
+                </tr>
+            </table>
+        </ng-template>
+        <ng-template #ShowRecent>
+
+        </ng-template>
+        <ng-template #ShowUnread>
+
+        </ng-template>
+    </div>
+</div>

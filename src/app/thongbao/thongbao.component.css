@@ -1,0 +1,56 @@
+.content {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: rgb(239, 239, 239);
+}
+
+.list {
+    display: flex;
+    margin: 50px 0;
+    height: 40px;
+    text-decoration: none;
+}
+
+.nav {
+    text-decoration: none;
+}
+
+.list-group-item {
+    border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list-group-item:hover {
+    text-decoration: underline;
+}
+
+.fa-heart-o {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-heart {
+    color: red;
+    cursor: pointer;
+}
+
+.content {}
+
+table {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.time {
+    text-align: right;
+}
